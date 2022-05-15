@@ -1,112 +1,132 @@
-/* VARIABLES */
+// IF
 
-// var username = '23';
-
-// username = 31345;
-
-// let userAge = 30.3;
-
-// userAge = 45;
-
-// const pi = 3.14;
-
-// // pi = 4.14;
+// let userAge = parseInt(prompt('Ingrese su edad'));
 
 
+// if (userAge == 20) {
 
-// TIPOS DE DATOS
+//   console.log('Comparacion no estricta: ' + 'tienes 20');
 
-// let product = 'iPhone'; // string
-
-// let stock = 10.234; // number
-
-// let darkMode = false; // boolean
-
-// let dontKnow; // undefined
-
-// let empty = null; // null
-
-// let notANumber = NaN; // NaN
+// }
 
 
+// if (userAge === 20) {
 
-// CONSOLA
+//   console.log('Comparacion estricta: ' + 'Tienes 20');
 
-// console.log('Hello world!');
-
-// console.log(darkMode);
-
-// console.log(product, stock);
-
-// console.log(dontKnow);
+// }
 
 
+// if (userAge != 20) {
 
-// PROMPT Y ALERT
+//   console.log('No igual no estricto: ' + 'No tienes 20');
 
-// let userBirth = prompt('Hola! Por favor, ingrese su año de nacimiento');
-
-// console.log(userBirth);
-
-// alert(userBirth);
+// }
 
 
+// if (userAge !== 20) {
 
-// OPERACIONES NUMERICAS
+//   console.log('No igual estricto: ' + 'No tienes 20');
 
-// let sum = 3 + 2; // 5
-
-// console.log(3 + 3); //6
-
-// let subtraction = 13 - 4; // 9
-
-// let multiplication = 2 * 7; // 14
-
-// let division = 9 / 3; // 3
-
-// let resto = 10 % 2; // 1
+// }
 
 
+// if (userAge > 20) {
 
-// OPERACIONES PARA STRINGS
+//   console.log('Tienes mas de 20');
 
-// let pika = 'pika';
+// }
 
-// let chu = 'chu';
 
-// let pikachu = 'pika' + 'chu';
+// if (userAge <= 20) {
 
-// let myName = prompt('Ingresa tu nombre por favor');
+//   console.log('Tienes 20 o menos');
 
-// let otroName = prompt('Ingrese otro nombre');
+// }
 
-// alert('Hola ' + myName + ' y ' + otroName + ' bienvenidos!');
+
+// if (userAge > 20 && userAge < 30) {
+
+//   console.log('Tienes mas de 20 pero menos de 30');
+
+// }
+
+
+// if (userAge > 20 || userAge < 30) {
+
+//   console.log('Tienes mas de 20 o menos de 30');
+  
+// }
+
+
+// if (!(userAge > 20)) {
+
+//   console.log('oki');
+
+// }
+
+
+// if (userAge < 20) console.log('todo un pro');
 
 
 
-// CURIOSIDADES
+// ELSE
 
-// let primeraCuriosidad = 2 + '2';
-
-// console.log(primeraCuriosidad);
-
-// let segundaCuriosidad = 2 - '2';
-
-// console.log(segundaCuriosidad);
-
-// let terceraCuriosidad = 2 * '2';
-
-// console.log(terceraCuriosidad);
+// let userAge = parseInt(prompt('ingrese su edad'));
 
 
+// if (userAge >= 18) { // si pasa esto
 
-// PROBLEMA PROMPT 
+//   console.log('puedes pasar, eres mayor de edad'); //entonces hago esto
 
-// let problema = prompt('Ingrese un numero');
+// }
+// else { // si no pasa lo anterior
 
-// alert(problema + 3);
+//   console.log('no puedes pasar, eres menor de edad'); //hago esto otro
+
+// }
 
 
-// let solucion = parseInt(problema);
+// let userAge = parseInt(prompt('ingrese su edad'));
 
-// alert(solucion + 3);
+// let userAddress = prompt('eres de california? (si/no)');
+
+
+// if ((userAddress === 'si' && userAge >= 21) || (userAddress === 'no' && userAge >= 18)) {
+
+//   console.log('puedes pasar, enjoy it');
+
+// }
+// else {
+
+//   console.log('no puedes pasar, sorry');
+
+// }
+
+
+
+// ELSE IF
+
+// let userAge = parseInt(prompt('ingrese su edad'));
+
+
+// if (userAge >= 18 && userAge < 30) {
+
+//   console.log('a beber cervecita y estudiar');
+
+// }
+// else if (userAge > 30 && userAge < 40) {
+
+//   console.log('y los hijos pa cuando?');
+
+// }
+// else if (17 >= 50) {
+
+//   console.log('a disfrutar todo el trabajo duro');
+
+// }
+// else {
+
+//   console.log('lo que sea');
+
+// }
