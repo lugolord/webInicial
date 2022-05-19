@@ -4,20 +4,15 @@ body {
 
   height: 100vh;
 
+  background-color: #41ead4;
+
   display: flex;
 
   justify-content: center;
 
   align-items: center;
 
-  background-color: #8338ec;
-
   color: #ffffff;
 
-}
-
-h1 {
-
   font-size: 5rem;
-  
 }
