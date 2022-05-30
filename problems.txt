@@ -1,4 +1,0 @@
-1) Un cliente nos pide un programa que calcule el area de cualquier triangulo comun, con medidas enteras. Nos dice que va a necesitar el valor para unas operaciones que hara despues. Hacerlo mediante funciones.
-
-
-2) Hacer un algoritmo que le pida el año de nacimiento al usuario y calcule que edad tiene actualmente. No tomar en cuenta ni el mes ni el dia de nacimiento. Hacerlo mediante funciones.

@@ -1,230 +1,169 @@
+// SIN OBJETOS
+
+// let userName = 'pepito';
+
+// let userAge = 25;
+
+// let userMail = 'pepito@gmail.com';
+
+// CON OBJETOS
+
+// const user = {name: 'pepito', age: 25, mail: 'pepito@gmail.com'} // Objeto literal
+
+// console.log(user);
+
+
+
+// ACCEDER A PROPIEDADES
+
+// console.log(user.name);
+
+// console.log(user.age);
+
+// console.log(user.birth);
+
+
+
+// ASIGNAR NUEVOS VALORES A PROPIEDADES
+
+// user.name = 'maria';
+
+// console.log(user.name);
+
+// user.age = 30;
+
+// console.log(user.age);
+
+
+
+// CLASES
+
+// class User {
+
+//   constructor(name, age, mail) {
+
+//     this.name = name;
+
+//     this.age = age;
+
+//     this.mail = mail;
+
+//   }
+
+// }
+
+// const newUser = new User('homero', 40, 'homero@gmail.com');
+
+// console.log(newUser);
+
 /* 
 
-  FUNCIONES
+  Importante acerca de las clases❗
 
-  Las funciones son bloques de codigo reutilizables, pueden ser llamadas todas las veces que se necesiten a lo largo de
-  todo el codigo.
-
-  En que nos ayudan?
-
-  - Hacen el codigo escalable.
-  - Reducir lineas de codigo.
-
-  Principios de programacion:
-
-  - DRY (Don't repeat yourself).
-  - KISS (Keep it simple, stupid).
-  - YAGNI (You ain't gonna need it).
+    🔹 Se escriben con PascalCase.
+    🔹 Sus nombres suelen estar en singular.
 
 */
 
 
 
-// COMO SE ESCRIBEN❔
+// METODOS
 
-// function nombreDescriptivo() {
+// class Product {
 
-//   let userName = prompt('ingrese su nombre, por favor');
+//   constructor(name, price, stock) {
 
-//   alert('Hola, ' + userName);
-  
+//     this.name = name;
+
+//     this.price = price;
+
+//     this.stock = stock;
+
+//   }
+
+//   handleStock() {
+
+//     this.stock--;
+
+//   }
+
 // }
+
+// const iphone = new Product('iphone', 1000, 10);
+
+// console.log(iphone.stock);
+
+
+// Un usuario realizo una compra
+
+// iphone.handleStock();
+
+// console.log(iphone.stock);
+
+
+// ERROR COMUN
+
+// handleStock(); // No podemos usar un metodo sin primero hacer referencia a un objeto que lo pueda utilizar❌
+
 
 /* 
 
-  Puntos importantes❗
+  Importante de los metodos❗
 
-  - La convencion de naming para ellas es camelCase, al igual que para las variables.
-  - Como todo, tienen que tener un nombre descriptivo.
-  - No pueden tener el mismo nombre de una variable.
+    🔹No son exactamente lo mismo que una funcion.
+    🔹Se escriben con camelCase.
+    🔹Tienen que ser utiles para el contexto de la clase.
 
 */
 
 
 
-// LLAMAR A UNA FUNCION
+// METODOS UTILES PARA ARRAYS
 
-// nombreDescriptivo(); // Los parentesis son obligatorios, sin ellos, no va a funcionar.
 
+// find
 
+// const products = [
+//   {name: 'iphone', price: 1000},
+//   {name: 'xiaomi', price: 500},
+//   {name: 'motorola', price: 600},
+//   {name: 'samsung', price: 800}
+// ]
 
-// PARAMETROS
+// const iphone = products.find(product => product.name === 'iphone');
 
-// let iva = 1.21;
+// console.log(iphone);
 
-// function mostrarIva(precio, iva) { 
+// const xiaomi = products.find(product => product.price === 500);
 
-//   alert(precio*iva);
+// console.log(xiaomi);
 
-// }
 
-// mostrarIva(100, 1.21);
+// filter
 
-/* 
+// const motorola = products.filter(product => product.name === 'motorola');
 
-  Importante❗
+// console.log(motorola);
 
-  - Los parametros no son variables, las variables se declaran, los parametros no.
-  - Pueden recibir cualquier valor de cualquier tipo (strings, numbers, booleanos, etc).
-  - Mucho mejor si tienen nombres distintos a las variables.
+// const menosDeMil = products.filter(product => product.price < 1000);
 
-*/
+// console.log(menosDeMil);
 
 
-// RETURN
+// map
 
-// function sumar(a, b) {
+// const prices = products.map(product => product.price);
 
-//   a + b;
+// console.log(prices);
 
-// }
+// const names = products.map(product => product.name);
 
-// function sumar(a, b) {
+// console.log(names);
 
-//   let resultado = a + b;
+// const newPrices = products.map(product => {
 
-//   return resultado;
+//   return {name: product.name, price: product.price*1.50}
 
-// }
+// });
 
-// let suma = sumar(5, 5); //10
-
-// console.log(suma);
-
-// console.log(sumar(2, 3));
-
-
-
-// EJERCICIO 1
-
-// let base = parseInt(prompt('ingrese la base'));
-
-// let height = parseInt(prompt('ingrese la altura'));
-
-// function calculateArea(b, h) {
-
-//   let triangleArea = (b*h)/2;
-  
-//   return triangleArea;
-
-// }
-
-// let result = calculateArea(base, height);
-
-// alert('El area del triangulo ingresado es: ' + result);
-
-
-
-// SCOPE O ALCANCE DE UNA VARIABLE
-
-// function haceLoQueSea() {
-  
-//   let someVariable = 16;
-
-//   return someVariable;
-
-// }
-
-// console.log(haceLoQueSea());
-
-/* 
-
-  Importante❗
-
-  - Esto del scope aplica para cualquier bloque de codigo, if, ciclos, etc.
-  - No debemos abusar con la cantidad de variables globales.
-
-*/
-
-
-
-/* 
-
-  CUANDO TENEMOS QUE USAR FUNCIONES❔
-
-  - Cuando estamos repitiendo varias veces el mismo codigo, en ese momento se nos tiene tiene que venir automaticamente
-  a la cabeza: voy a hacer una funcion, asi solo lo escribo una sola vez!💡
-
-  - Para hacer procesos u operaciones.
-
-  ACLARACIONES IMPORTANTES❗
-
-  - Las funciones deben ser lo mas simples y sencillas posible. Deben hacer, en la medida de lo posible, una unica tarea. Si vemos que estamos haciendo una funcion que hace muchas cosas al mismo tiempo, lo mejor seria dividirla en varias! Divide y venceras!
-
-  - A pesar de que podemos usarlas antes de declararlas, la buena practica es declarar primero y luego usarlas.
-
-*/
-
-
-
-// EJERCICO 2
-
-// function requestData() {
-
-//   let userBirth = parseInt(prompt('ingrese su año de nacimiento'));
-
-//   return userBirth;
-
-// }
-
-// function calculateAge(year) {
-
-//   let birthYear = 2022 - year;
-
-//   return birthYear;
-
-// }
-
-// function showAge(age) {
-
-//   alert('tienes ' + age + ' años');
-
-// }
-
-// showAge( calculateAge( requestData() ) );
-
-
-
-// OTRAS FORMAS DE ESCRIBIR FUNCIONES😮
-
-
-
-// FUNCIONES ANONIMAS🐱‍👤
-
-
-// const mostrarAlerta = function(msg) { 
-
-//   alert(msg);
-
-//   return 3;
-
-// }
-
-// mostrarAlerta('hola futuros desarrolladores!');
-
-
-// FUNCIONES FLECHA O ARROW FUNCTIONS🏹
-
-// const restar = (a, b) => a - b;
-
-// console.log(restar(4, 3));
-
-
-// const sumarIva = (price) => {
-
-//   let priceWithIva = price*1.21;
-
-//   return priceWithIva;
-
-// } 
-
-// console.log(sumarIva(100));
-
-/* 
-
-  Importante❗
-
-  - Ninguna forma es realmente mejor que otra, es un tema de preferencia y comodidad.
-  - Las funciones anonimas y las arrow, no pueden utilizarse antes de declararse!
-
-*/
+// console.log(newPrices);
